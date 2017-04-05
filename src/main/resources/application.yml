@@ -1,0 +1,40 @@
+server:
+   port: 8083
+   contextPath: /
+spring:
+  redis:
+    host: hfc.dbdbd.cn
+    port: 6379
+    password: lucifer-hfc
+# DATASOURCE
+jdbc:
+    driverClass: com.mysql.jdbc.Driver
+    url: jdbc:mysql://hfc.dbdbd.cn/answer-draw?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&rewriteBatchedStatements=TRUE&zeroDateTimeBehavior
+    username: hfc
+    password: lucifer-hfc
+
+#jdbc:
+#    driverClass: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost/oauth2-user?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&rewriteBatchedStatements=TRUE&zeroDateTimeBehavior
+#    username: root
+#    password:
+#jdbc-hfc:
+#    driverClass: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost/hfc?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&rewriteBatchedStatements=TRUE&zeroDateTimeBehavior
+#    username: root
+#    password:
+
+
+# MyBatis
+
+mybatis:
+    typeAliasesPackage: com.lucifer
+    mapperLocations: classpath:/sqlmaps/*.xml
+    configLocation: classpath:/mybatis-config.xml
+
+
+
+
+
+
+
