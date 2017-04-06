@@ -1,0 +1,38 @@
+/*320px布局*/
+html{font-size: 100px;}
+body{font-size: 0.14rem;/*实际相当于14px*/}
+body{
+    padding:0;
+    margin:0;
+}
+.div2{
+    font-size:0.14rem;
+}
+.div3{
+    width:3rem;
+    height:3rem;
+
+    border:1px solid #000;
+    box-sizing:border-box;
+}
+.div4{
+    margin-top:0.1rem;
+    width:2rem;
+    height:2rem;
+
+    border:1px solid #000;
+    box-sizing:border-box;
+}
+.img1{
+    width:3.2rem;
+}
+
+
+.bg1{
+   height: 100%;
+   width: 100%;
+   background-position: center 0;
+   background-repeat: no-repeat;
+   background-size: cover;
+   transition: opacity 200ms ease-in-out;
+}

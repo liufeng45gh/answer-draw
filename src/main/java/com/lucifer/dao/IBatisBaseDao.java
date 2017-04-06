@@ -16,9 +16,7 @@ public class IBatisBaseDao {
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;
 
-	@Resource
-	@Qualifier("hfcSqlSessionTemplate")
-	protected SqlSession hfcSqlSession;
+
 	
 	public Long nextId(String sequence){
 		return stringRedisTemplate.opsForValue().increment(sequence, 1L);

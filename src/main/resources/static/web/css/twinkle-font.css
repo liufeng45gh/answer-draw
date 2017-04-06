@@ -1,0 +1,46 @@
+.twinkle{
+    -webkit-animation: glow 2s ease-in-out both infinite;
+    animation: glow 2s ease-in-out both infinite;
+    text-align: center;
+    color: snow;
+    font: 15vw/1 Permanent Marker;
+    position: absolute;
+    top: 20%;
+}
+
+
+
+@-webkit-keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px tomato, -25px 25px 50px yellow, 25px 25px 50px tomato;
+  }
+  33% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px cyan, -25px 25px 50px tomato, 25px 25px 50px cyan;
+  }
+  66% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px yellow, -25px 25px 50px cyan, 25px 25px 50px yellow;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px tomato, -25px 25px 50px yellow, 25px 25px 50px tomato;
+  }
+  33% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px cyan, -25px 25px 50px tomato, 25px 25px 50px cyan;
+  }
+  66% {
+    text-shadow: 0 0 8.33333px snow, 0 -25px 50px yellow, -25px 25px 50px cyan, 25px 25px 50px yellow;
+  }
+}
+
+.btn-start{
+        text-align: center;
+        color: snow;
+        font: 15vw/1 Permanent Marker;
+        position: absolute;
+        bottom: 20%;
+        background-color: rgba(239,57,50,1);
+        color: rgba(133,32,28,1);
+        border-color: rgba(133,32,28,.2);
+}

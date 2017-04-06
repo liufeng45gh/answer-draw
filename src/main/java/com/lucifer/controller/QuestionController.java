@@ -29,4 +29,9 @@ public class QuestionController {
     public String startAnswer(){
        return "start-answer";
     }
+
+    @RequestMapping(value="/",method= RequestMethod.GET)
+    public String index(){
+        return "index";
+    }
 }
