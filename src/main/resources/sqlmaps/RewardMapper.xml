@@ -12,5 +12,7 @@
         <result column="current" property="current"/>
     </resultMap>
 
-
+    <select id="rewardList" resultMap="RewardMap" >
+        select * from reward order by id asc
+    </select>
 </mapper>

@@ -16,5 +16,7 @@
         <result column="top" property="top"/>
     </resultMap>
 
-
+    <select id="questionList" resultMap="QuestionMap" >
+        select * from question order by top desc, id asc
+    </select>
 </mapper>
