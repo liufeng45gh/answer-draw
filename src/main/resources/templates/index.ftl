@@ -5,6 +5,7 @@
     <link rel='stylesheet' href='/web/css/twinkle-font.css' type='text/css' media='screen' />
     <#include "c-head.ftl"/>
     <script  src="/web/js/adapt.js"></script>
+    <title>测一测，你的投行人生是什么段位</title>
 </head>
 
 <body>
@@ -66,7 +67,7 @@
 </div>
 
 <div class="twinkle">
-        这个字体是不是特别炫酷
+    测一测，你的投行人生是什么段位
 </div>
 <div class="btn-div">
     <div class="btn-start round">

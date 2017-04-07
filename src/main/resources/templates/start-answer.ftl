@@ -3,6 +3,7 @@
 <head>
     <#include "c-head.ftl"/>
     <script  src="/web/js/adapt.js"></script>
+    <title>测一测，你的投行人生是什么段位</title>
 </head>
 
 <body>
