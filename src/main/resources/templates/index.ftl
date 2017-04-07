@@ -68,10 +68,12 @@
 <div class="twinkle">
         这个字体是不是特别炫酷
 </div>
-
-<div class="btn-start">
-开始
+<div class="btn-div">
+    <div class="btn-start round">
+        开始
+    </div>
 </div>
+
 
 </body>
 </html>

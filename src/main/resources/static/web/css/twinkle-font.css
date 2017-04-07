@@ -34,13 +34,44 @@
   }
 }
 
+.btn-div{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+
 .btn-start{
         text-align: center;
         color: snow;
         font: 15vw/1 Permanent Marker;
-        position: absolute;
-        bottom: 20%;
+        //position: absolute;
+        //bottom: 20%;
         background-color: rgba(239,57,50,1);
-        color: rgba(133,32,28,1);
+        //color: rgba(133,32,28,1);
         border-color: rgba(133,32,28,.2);
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.round{
+
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      font-size: 25px;
+      text-shadow: 0 1px 0 rgba(255,255,255,.7);
+      letter-spacing: -.065em;
+      font-family: "Hammersmith One", sans-serif;
+      -webkit-transition: all .25s ease-in-out;
+      -o-transition: all .25s ease-in-out;
+      -moz-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
+      box-shadow: 2px 2px 7px rgba(0,0,0,.2);
+      border-radius: 300px;
+      z-index: 1;
+      border-width: 4px;
+      border-style: solid;
 }
