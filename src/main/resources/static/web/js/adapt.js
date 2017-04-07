@@ -12,3 +12,10 @@ $(document).ready(function () {
       $(".btn-start").css("margin-top",$(window).height()*0.75);
     });
 });
+
+
+$(document).ready(function () {
+    $(".btn-start ").click(function() {
+      window.location.href = "/start-answer";
+    });
+});
