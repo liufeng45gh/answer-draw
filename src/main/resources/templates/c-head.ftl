@@ -5,4 +5,8 @@
 <script  src="/web/js/jquery-3.1.1.js"></script>
 
 <script  src="/web/js/common.js"></script>
+<style>
+@font-face {font-family:HYXiaoMaiTiJ; src: url("/web/ttf/HYXiaoMaiTiJ.ttf")}
+</style>
+
 

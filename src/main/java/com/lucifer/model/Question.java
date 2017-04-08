@@ -11,7 +11,7 @@ public class Question {
 
     private String imgUrl;
 
-    private String right_key;
+    private String rightKey;
 
     private Integer score;
 
@@ -48,12 +48,12 @@ public class Question {
         this.imgUrl = imgUrl;
     }
 
-    public String getRight_key() {
-        return right_key;
+    public String getRightKey() {
+        return rightKey;
     }
 
-    public void setRight_key(String right_key) {
-        this.right_key = right_key;
+    public void setRightKey(String rightKey) {
+        this.rightKey = rightKey;
     }
 
     public Integer getScore() {

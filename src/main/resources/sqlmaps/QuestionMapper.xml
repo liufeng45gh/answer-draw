@@ -7,7 +7,7 @@
     <resultMap type="com.lucifer.model.Question" id="QuestionMap">
         <id column="id" property="id"/>
         <result column="title" property="title"/>
-        <result column="image_url" property="imageUrl"/>
+        <result column="image_url" property="imgUrl"/>
         <result column="score" property="score"/>
         <result column="right_key" property="rightKey"/>
         <result column="A" property="A"/>

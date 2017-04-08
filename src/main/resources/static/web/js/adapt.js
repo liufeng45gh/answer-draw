@@ -1,7 +1,10 @@
 $(document).ready(function () {
     $(".bg1").height($(window).height());
+     $(".bg1").width($(window).width());
+
     $(window).resize(function() {
       $(".bg1").height($(window).height());
+      $(".bg1").width($(window).width());
     });
 });
 
