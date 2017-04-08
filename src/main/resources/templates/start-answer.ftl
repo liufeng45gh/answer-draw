@@ -51,8 +51,8 @@
     -->
 </div>
 <div id="question-template" style="display:none;">
-    <div class="question-ab" id="question-{id}">
-        <div class="question" >
+
+        <div class="question" id="question-{id}">
             <img  class="bg1" src="{bg-img}"></img>
             <div class="A">
                 <div class="A-R" >
@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 </body>
 </html>

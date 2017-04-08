@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".question-ab").css("top",$(window).height());
+   // $(".question-ab").css("top",$(window).height());
 });
 
 var questionList = null;
@@ -46,7 +46,7 @@ function addNewQuestion(question) {
 
 function showMainQuestion(){
     $("#main-question").css("top",0);
-    $("#question-"+questionList[0].id).css("top",0);
+    //$("#question-"+questionList[0].id).css("top",0);
 
     //$("#main-question").show();
 }
