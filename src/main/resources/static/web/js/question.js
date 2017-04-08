@@ -71,7 +71,7 @@ $(document).ready( function () {
 
         mybody.addEventListener('touchstart', function(e) {
 
-            e.preventDefault();
+            //e.preventDefault();
 
             startX = e.touches[0].pageX;
 
@@ -81,7 +81,7 @@ $(document).ready( function () {
 
         mybody.addEventListener('touchmove', function(e) {
 
-            e.preventDefault();
+            //e.preventDefault();
 
             moveEndX = e.changedTouches[0].pageX;
 
@@ -101,11 +101,12 @@ $(document).ready( function () {
 
             else if ( Y > 0) {
             //alert(‘向下’);
-                nextQuestion();
+                preQuestion();
             }
 
             else if ( Y < 0 ) {
             //alert(‘向上’);
+            nextQuestion();
             }
 
             else{
@@ -114,12 +115,44 @@ $(document).ready( function () {
 
         });
 
-});
+         mybody.addEventListener('touchend', function(e) {
 
+            //e.preventDefault();
+
+           clearMoving();
+
+        });
+
+});
+var moving = false;
 function  nextQuestion(){
+    if (moving) {
+        return;
+    }
+    moving = true;
     if (current_question_index == questionList.length-1) {
         return;
     }
     $("#question-"+questionList[current_question_index].id).animate({top: -$(window).height()-10});
     $("#question-"+questionList[current_question_index+1].id).animate({top: 0});
+    current_question_index = current_question_index + 1;
+    setTimeout(clearMoving,500);
+}
+
+function  preQuestion(){
+    if (moving) {
+        return;
+    }
+    moving = true;
+    if (current_question_index == 0) {
+        return;
+    }
+    $("#question-"+questionList[current_question_index].id).animate({top: $(window).height()+10});
+    $("#question-"+questionList[current_question_index-1].id).animate({top: 0});
+    current_question_index = current_question_index - 1;
+    setTimeout(clearMoving,500);
+}
+
+function clearMoving(){
+    moving = false;
 }
