@@ -5,6 +5,9 @@ $(document).ready(function () {
        "overflow-y":"hidden",
        "height": $(window).height()
      });
+    $(window).resize(function() {
+       $("#main-question").css("height",$(window).height());
+     });
 });
 
 var questionList = null;
@@ -48,11 +51,12 @@ function addNewQuestion(question) {
     template = template.replace("{C-TEXT}","C、"+question.c);
     $("#main-question-relative").append(template);
 }
-
+var current_question_index = 0;
 function showMainQuestion(){
     $("#main-question").css("top",0);
     $("#question-"+questionList[0].id).css("top",0);
-
+    $("#main-loading").remove();
+    current_question_index = 0;
     //$("#main-question").show();
 }
 
@@ -97,6 +101,7 @@ $(document).ready( function () {
 
             else if ( Y > 0) {
             //alert(‘向下’);
+                nextQuestion();
             }
 
             else if ( Y < 0 ) {
@@ -110,3 +115,11 @@ $(document).ready( function () {
         });
 
 });
+
+function  nextQuestion(){
+    if (current_question_index == questionList.length-1) {
+        return;
+    }
+    $("#question-"+questionList[current_question_index].id).animate({top: -$(window).height()-10});
+    $("#question-"+questionList[current_question_index+1].id).animate({top: 0});
+}
