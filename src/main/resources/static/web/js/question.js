@@ -71,7 +71,7 @@ $(document).ready( function () {
 
         mybody.addEventListener('touchstart', function(e) {
 
-            //e.preventDefault();
+            e.preventDefault();
 
             startX = e.touches[0].pageX;
 
@@ -81,7 +81,7 @@ $(document).ready( function () {
 
         mybody.addEventListener('touchmove', function(e) {
 
-            //e.preventDefault();
+            e.preventDefault();
 
             moveEndX = e.changedTouches[0].pageX;
 
@@ -91,15 +91,15 @@ $(document).ready( function () {
 
             Y = moveEndY - startY;
 
-            if ( X > 0 ) {
-            //alert(‘向右’);
-            }
+//            if ( X > 0 ) {
+//            //alert(‘向右’);
+//            }
+//
+//            else if ( X < 0 ) {
+//            //alert(‘向左’);
+//            }
 
-            else if ( X < 0 ) {
-            //alert(‘向左’);
-            }
-
-            else if ( Y > 0) {
+             if ( Y > 0) {
             //alert(‘向下’);
                 preQuestion();
             }
