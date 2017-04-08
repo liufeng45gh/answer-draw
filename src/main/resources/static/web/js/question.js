@@ -168,9 +168,9 @@ function initClickEvent() {
 //         });
 //    });
 
-    $(".a-btn").on("tap",function(){
+    $(".a-text").click(function(){
       $(this).parent().parent().parent().find(".a-btn").attr("src","/web/img/btn.png");
-      $(this).attr("src","/web/img/btn-selected.png");
+      $(this).parent().find(".a-btn").attr("src","/web/img/btn-selected.png");
     });
 }
 
