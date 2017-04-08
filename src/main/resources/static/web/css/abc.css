@@ -74,14 +74,14 @@ body {
 }
 .B{
     position: absolute;
-    top: 20%;
+    top: 30%;
     width: 100%;
     height: 50px;
 }
 
 .C{
     position: absolute;
-    top: 30%;
+    top: 50%;
     width: 100%;
     height: 50px;
 }

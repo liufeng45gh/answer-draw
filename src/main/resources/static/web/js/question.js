@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $(".question-ab").css("top",$(window).height());
-    $(document.body).css({
+    $("#main-question").css({
        "overflow-x":"hidden",
        "overflow-y":"hidden",
        "height": $(window).height()
@@ -54,4 +54,58 @@ function showMainQuestion(){
     $("#question-"+questionList[0].id).css("top",0);
 
     //$("#main-question").show();
+}
+
+$(document).ready(){
+        var mybody = document.getElementsByTagName('body')[0];
+
+
+
+        //滑动处理
+
+        var startX, startY, moveEndX, moveEndY, X, Y;
+
+        mybody.addEventListener('touchstart', function(e) {
+
+            e.preventDefault();
+
+            startX = e.touches[0].pageX;
+
+            startY = e.touches[0].pageY;
+
+        });
+
+        mybody.addEventListener('touchmove', function(e) {
+
+            e.preventDefault();
+
+            moveEndX = e.changedTouches[0].pageX;
+
+            moveEndY = e.changedTouches[0].pageY;
+
+            X = moveEndX - startX;
+
+            Y = moveEndY - startY;
+
+            if ( X > 0 ) {
+            //alert(‘向右’);
+            }
+
+            else if ( X < 0 ) {
+            //alert(‘向左’);
+            }
+
+            else if ( Y > 0) {
+            //alert(‘向下’);
+            }
+
+            else if ( Y < 0 ) {
+            //alert(‘向上’);
+            }
+
+            else{
+            //alert(‘没滑动’);
+             }
+
+        });
 }
