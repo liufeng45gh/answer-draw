@@ -39,6 +39,8 @@ $(document).ready(function () {
              addNewQuestion(data[i]);
             }
 
+
+
     });
 });
 
@@ -58,6 +60,7 @@ function showMainQuestion(){
     $("#main-loading").remove();
     current_question_index = 0;
     //$("#main-question").show();
+     initClickEvent();
 }
 
 $(document).ready( function () {
@@ -156,3 +159,19 @@ function  preQuestion(){
 function clearMoving(){
     moving = false;
 }
+
+function initClickEvent() {
+//    $(".a-btn").each(function(){
+//        this.addEventListener('touchend', function(e) {
+//            $(this).parent().parent().parent().find(".a-btn").attr("src","/web/img/btn.png");
+//            $(this).attr("src","/web/img/btn-selected.png");
+//         });
+//    });
+
+    $(".a-btn").on("tap",function(){
+      $(this).parent().parent().parent().find(".a-btn").attr("src","/web/img/btn.png");
+      $(this).attr("src","/web/img/btn-selected.png");
+    });
+}
+
+
