@@ -56,7 +56,7 @@ function showMainQuestion(){
     //$("#main-question").show();
 }
 
-$(document).ready(){
+$(document).ready( function () {
         var mybody = document.getElementsByTagName('body')[0];
 
 
@@ -108,4 +108,5 @@ $(document).ready(){
              }
 
         });
-}
+
+});

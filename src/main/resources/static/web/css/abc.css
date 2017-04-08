@@ -50,6 +50,7 @@ body {
 #main-question{
     position: absolute;
     top: 0px;
+    width: 100%;
 }
 
 #main-question-relative{
