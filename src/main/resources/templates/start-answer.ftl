@@ -75,5 +75,20 @@
         </div>
     </div>
 </div>
+<div id="submit-template" style="display: none;">
+    <div class="question-ab" id="submit-page">
+        <div class="question" >
+            <img  class="bg1" src="/web/img/bg1.jpg"></img>
+
+            <div class="B">
+                <div class="A-R" >
+                    <img class="a-btn" src="/web/img/c-bg-btn-select.png"></img>
+                    <div class="a-submit">提交答案</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 </body>
 </html>
