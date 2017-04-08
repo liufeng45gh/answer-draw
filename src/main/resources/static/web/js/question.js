@@ -74,7 +74,7 @@ $(document).ready( function () {
 
         mybody.addEventListener('touchstart', function(e) {
 
-            e.preventDefault();
+            //e.preventDefault();
 
             startX = e.touches[0].pageX;
 
@@ -84,7 +84,7 @@ $(document).ready( function () {
 
         mybody.addEventListener('touchmove', function(e) {
 
-            e.preventDefault();
+           //e.preventDefault();
 
             moveEndX = e.changedTouches[0].pageX;
 
@@ -161,17 +161,17 @@ function clearMoving(){
 }
 
 function initClickEvent() {
-//    $(".a-btn").each(function(){
-//        this.addEventListener('touchend', function(e) {
-//            $(this).parent().parent().parent().find(".a-btn").attr("src","/web/img/btn.png");
-//            $(this).attr("src","/web/img/btn-selected.png");
-//         });
-//    });
-
-    $(".a-text").click(function(){
-      $(this).parent().parent().parent().find(".a-btn").attr("src","/web/img/btn.png");
-      $(this).parent().find(".a-btn").attr("src","/web/img/btn-selected.png");
+    $(".a-text").each(function(){
+        this.addEventListener('touchend', function(e) {
+            $(this).parent().parent().parent().find(".a-btn").attr("src","/web/img/btn.png");
+            $(this).parent().find(".a-btn").attr("src","/web/img/btn-selected.png");
+         });
     });
+
+//    $(".a-text").on("tap",function(){
+//      $(this).parent().parent().parent().find(".a-btn").attr("src","/web/img/btn.png");
+//      $(this).parent().find(".a-btn").attr("src","/web/img/btn-selected.png");
+//    });
 }
 
 
