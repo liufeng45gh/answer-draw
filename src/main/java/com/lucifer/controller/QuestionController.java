@@ -89,4 +89,16 @@ public class QuestionController {
         request.setAttribute("description",description);
         return "get-score";
     }
+
+    @RequestMapping(value="/get-reward",method= RequestMethod.GET)
+    public String getReward(@CookieValue(value = "answerToken") String token,HttpServletRequest request){
+        AnswerResult answerResult = answerResultDao.getAnswerResult(token);
+        if (null == answerResult) {
+            return "redirect:/start-answer";
+        }
+        if (answerResult.getRightCount() < 8) {
+            return "redirect:/start-answer";
+        }
+        return "get-reward";
+    }
 }

@@ -5,6 +5,7 @@
     <script  src="/web/js/adapt.js"></script>
     <title>测一测，你的投行人生是什么段位</title>
     <link rel='stylesheet' href='/web/css/get-score.css' type='text/css' media='screen' />
+    <script  src="/web/js/get-score.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,14 @@
             ${description}
         </div>
     </div>
-
+    <#if answerResult.rightCount gt 7 >
+    <div class="reward-div">
+        <div class="reward">
+            <img class="a-btn" src="/web/img/c-bg-btn.png"></img>
+            <div class="a-text">点击抽奖</div>
+        </div>
+    </div>
+    </#if>
 
 </div>
 </body>
