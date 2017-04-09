@@ -47,6 +47,7 @@ $(document).ready(function () {
 function addNewQuestion(question) {
     var template = $("#question-template").html();
     template = template.replace("question-{id}","question-"+question.id);
+     template = template.replace("{targetId}",question.id);
     template = template.replace("{bg-img}",question.imgUrl);
     template = template.replace("{A-TEXT}","A、"+question.a);
     template = template.replace("{B-TEXT}","B、"+question.b);
@@ -180,11 +181,57 @@ function initClickEvent() {
             $(this).parent().find(".a-btn").attr("src","/web/img/btn-selected.png");
          });
     });
+    $(".a-submit").get(0).addEventListener('touchend',function(){
+        submitAnswer();
+    });
 
 //    $(".a-text").on("tap",function(){
 //      $(this).parent().parent().parent().find(".a-btn").attr("src","/web/img/btn.png");
 //      $(this).parent().find(".a-btn").attr("src","/web/img/btn-selected.png");
 //    });
+}
+
+function submitAnswer(){
+    var answerList = new Array();
+     $(".a-btn").each(function(){
+            var src = $(this).attr("src");
+            if (src == "/web/img/btn-selected.png") {
+                 var id = $(this).parent().parent().parent().parent().attr("targetId");
+                 var rightKey = $(this).parent().parent().attr("class");
+                 var answer = {id: id,rightKey: rightKey};
+                 answerList.push(answer);
+            }
+     });
+     if (questionList.length>answerList.length) {
+        layer.msg("您有未作答的题目");
+        return;
+     }
+     var index = layer.load(5, {
+       shade: [0.1,'#fff'] //0.1透明度的白色背景
+     });
+
+     url = "/submit-answer"
+
+     var more_request =$.ajax({
+        type: 'post',
+        url: url,
+        data: JSON.stringify(answerList),
+        dataType: 'json',
+        contentType: 'application/json'
+     });
+
+     more_request.fail(function( jqXHR, textStatus ) {
+       if(jqXHR.status==401){
+          //openWeiboLogin();
+
+       }
+     });
+
+     more_request.done(function(result) {
+            var answerToken = result.data;
+            setSessionCookie("answerToken",answerToken);
+            window.location.href = "/get-score"
+     });
 }
 
 

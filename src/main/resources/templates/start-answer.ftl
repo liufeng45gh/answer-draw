@@ -51,7 +51,7 @@
     -->
 </div>
 <div id="question-template" style="display:none;">
-    <div class="question-ab" id="question-{id}">
+    <div class="question-ab" id="question-{id}" targetId="{targetId}">
         <div class="question" >
             <img  class="bg1" src="{bg-img}"></img>
             <div class="A">
@@ -83,7 +83,7 @@
             <div class="B">
                 <div class="A-R" >
                     <img class="a-btn" src="/web/img/c-bg-btn-select.png"></img>
-                    <div class="a-submit">提交答案</div>
+                    <div class="a-submit" >提交答案</div>
                 </div>
             </div>
 
