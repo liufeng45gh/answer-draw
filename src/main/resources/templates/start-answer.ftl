@@ -11,12 +11,12 @@
 
 <body >
 <div id="main-loading">
-    <img  class="bg1" src="/web/img/bg1.jpg"></img>
+    <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/bg1.jpg"></img>
     <div class="div-pro">
         <div class="process-div">
-            <img  src="/web/img/p-bg.png" class="p-bg"></img>
-            <img  src="/web/img/p-process.png" class="p-process"></img>
-            <img  src="/web/img/p-logo.png" class="p-logo"></img>
+            <img  src="http://oo69h0bhm.bkt.clouddn.com/p-bg.png" class="p-bg"></img>
+            <img  src="http://oo69h0bhm.bkt.clouddn.com/p-process.png" class="p-process"></img>
+            <img  src="http://oo69h0bhm.bkt.clouddn.com/p-logo.png" class="p-logo"></img>
             <div class="loading-font">题库加载中......</div>
         </div>
     </div>
@@ -78,11 +78,11 @@
 <div id="submit-template" style="display: none;">
     <div class="question-ab" id="submit-page">
         <div class="question" >
-            <img  class="bg1" src="/web/img/bg1.jpg"></img>
+            <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/bg1.jpg"></img>
 
             <div class="B">
                 <div class="A-R" >
-                    <img class="a-btn" src="/web/img/c-bg-btn-select.png"></img>
+                    <img class="a-btn" src="http://oo69h0bhm.bkt.clouddn.com/c-bg-btn-select.png"></img>
                     <div class="a-submit" >提交答案</div>
                 </div>
             </div>
