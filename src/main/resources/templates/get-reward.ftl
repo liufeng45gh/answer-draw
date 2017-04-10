@@ -10,7 +10,7 @@
 
 <body>
 <div id="main">
-    <img  class="bg1" src="/web/img/bg1.jpg"></img>
+    <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/bg1.jpg"></img>
 
 
 </div>

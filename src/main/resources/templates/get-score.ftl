@@ -10,7 +10,7 @@
 
 <body>
 <div id="main">
-    <img  class="bg1" src="/web/img/bg-result.jpg"></img>
+    <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/bg-result.jpg"></img>
     <div class="title-div">
         <div class="title">
             ${nickTitle}
@@ -29,7 +29,7 @@
     <#if answerResult.rightCount gt 7 >
     <div class="reward-div">
         <div class="reward">
-            <img class="a-btn" src="/web/img/c-bg-btn.png"></img>
+            <img class="a-btn" src="http://oo69h0bhm.bkt.clouddn.com/c-bg-btn.png"></img>
             <div class="a-text">点击抽奖</div>
         </div>
     </div>
