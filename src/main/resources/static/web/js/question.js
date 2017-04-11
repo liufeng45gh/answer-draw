@@ -67,7 +67,7 @@ function showMainQuestion(){
     //$("#main-question").show();
      initClickEvent();
      $(".arrow").css("top",$(window).height()-30);
-     $(".arrow").css("left",$(window).width()-10);
+     $(".arrow").css("left",$(window).width()/2-10);
 }
 
 $(document).ready( function () {
