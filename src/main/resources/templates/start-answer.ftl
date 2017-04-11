@@ -26,6 +26,7 @@
     <div id="main-question-relative">
 
     </div>
+    <img src="/web/img/arrow.png" style="width:20px;height:15px; top:460px; left:150px;" id="array" class="arrow">
     <!--
     <div class="question">
         <img  class="bg1" src="/web/img/bg2.jpg"></img>
@@ -90,5 +91,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>

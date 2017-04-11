@@ -66,6 +66,8 @@ function showMainQuestion(){
     current_question_index = 0;
     //$("#main-question").show();
      initClickEvent();
+     $(".arrow").css("top",$(window).height()-30);
+     $(".arrow").css("left",$(window).width()-10);
 }
 
 $(document).ready( function () {
