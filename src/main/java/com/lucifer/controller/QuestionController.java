@@ -7,10 +7,12 @@ import com.lucifer.model.Answer;
 import com.lucifer.model.AnswerResult;
 import com.lucifer.model.Question;
 import com.lucifer.service.QuestionService;
+import com.lucifer.utils.Constant;
 import com.lucifer.utils.Md5Utils;
 import com.lucifer.utils.RandomUtil;
 import com.lucifer.utils.Result;
 import com.wordnik.swagger.annotations.ApiOperation;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +36,9 @@ public class QuestionController {
 
     @Resource
     private AnswerResultDao answerResultDao;
+
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
 
     @ApiOperation(value = "所有问题")
     @RequestMapping(value="/all-question",method= RequestMethod.GET)
@@ -70,23 +75,30 @@ public class QuestionController {
             return "redirect:/start-answer";
         }
         request.setAttribute("answerResult",answerResult);
+        Boolean reward = false;
         String nickTitle = null;
         String description = null;
         if (answerResult.getRightCount() < 3) {
             nickTitle = "投行菜鸟";
             description = "本次共答对"+answerResult.getRightCount()+"道题  （2题及以下者）,你还是投行菜鸟,需要多多向前学习呦!";
-        } else if (answerResult.getRightCount() < 6) {
+        } else if (answerResult.getRightCount() < 5) {
             nickTitle = "投行新手";
-            description = "本次共答对"+answerResult.getRightCount()+"道题  （3-5题）,你还是投行新手,争取早日成为投行老兵呦!";
-        }else if (answerResult.getRightCount() < 8) {
+            description = "本次共答对"+answerResult.getRightCount()+"道题  （3-4题）,你还是投行新手,争取早日成为投行老兵呦!";
+        }else if (answerResult.getRightCount() < 7) {
             nickTitle = "投行老兵";
-            description = "本次共答对"+answerResult.getRightCount()+"道题  （6-7题）,功夫不负有心人,恭喜你已经成为投行老兵!";
+            description = "本次共答对"+answerResult.getRightCount()+"道题  （5-6题）,功夫不负有心人,恭喜你已经成为投行老兵!";
         }else {
             nickTitle = "投行大佬";
-            description = "本次共答对"+answerResult.getRightCount()+"道题  （8-9题）,恭喜您获得投行大佬称号,膜拜中! 你可以获得一次抽奖机会赶快试下手气吧!";
+            description = "本次共答对"+answerResult.getRightCount()+"道题  （8-9题）,恭喜您获得投行大佬称号,膜拜中! 前100名参与者将获得咖啡一杯";
+            Long count = stringRedisTemplate.opsForValue().increment(Constant.KEY_COFFEE_REWARD_COUNT,1);
+            if (count <= 100l) {
+                reward = true;
+            }
         }
         request.setAttribute("nickTitle",nickTitle);
         request.setAttribute("description",description);
+
+
         return "get-score";
     }
 

@@ -30,7 +30,7 @@
     <div class="reward-div">
         <div class="reward">
             <img class="a-btn" src="http://oo69h0bhm.bkt.clouddn.com/c-bg-btn.png"></img>
-            <div class="a-text">点击抽奖</div>
+            <div class="a-text">点击领取</div>
         </div>
     </div>
     </#if>
