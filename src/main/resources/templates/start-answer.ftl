@@ -10,7 +10,7 @@
 </head>
 
 <body >
-<img src="http://oo69h0bhm.bkt.clouddn.com/logo.png" style="display:none;"/>
+<img src="http://oo69h0bhm.bkt.clouddn.com/logo.png" style="display:none;position:absolute;"/>
 <div id="main-loading">
     <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/bg1.jpg"></img>
     <div class="div-pro">
