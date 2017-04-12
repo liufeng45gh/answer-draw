@@ -80,16 +80,16 @@ public class QuestionController {
         String description = null;
         if (answerResult.getRightCount() < 3) {
             nickTitle = "投行菜鸟";
-            description = "本次共答对"+answerResult.getRightCount()+"道题  （2题及以下者）,你还是投行菜鸟,需要多多向前学习呦!";
+            description = "本次共答对"+answerResult.getRightCount()+"道题 ,你还是投行菜鸟,需要多多向前学习呦!";
         } else if (answerResult.getRightCount() < 5) {
             nickTitle = "投行新手";
-            description = "本次共答对"+answerResult.getRightCount()+"道题  （3-4题）,你还是投行新手,争取早日成为投行老兵呦!";
+            description = "本次共答对"+answerResult.getRightCount()+"道题 ,你还是投行新手,争取早日成为投行老兵呦!";
         }else if (answerResult.getRightCount() < 7) {
             nickTitle = "投行老兵";
-            description = "本次共答对"+answerResult.getRightCount()+"道题  （5-6题）,功夫不负有心人,恭喜你已经成为投行老兵!";
+            description = "本次共答对"+answerResult.getRightCount()+"道题 ,功夫不负有心人,恭喜你已经成为投行老兵!";
         }else {
             nickTitle = "投行大佬";
-            description = "本次共答对"+answerResult.getRightCount()+"道题  （8-9题）,恭喜您获得投行大佬称号,膜拜中! 前100名参与者将获得咖啡一杯";
+            description = "本次共答对"+answerResult.getRightCount()+"道题  ,恭喜您获得投行大佬称号,膜拜中! 赶快领取你的 Coffee Box吧!";
             Long count = stringRedisTemplate.opsForValue().increment(Constant.KEY_COFFEE_REWARD_COUNT,1);
             if (count <= 100l) {
                 reward = true;

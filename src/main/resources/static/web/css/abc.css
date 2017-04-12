@@ -94,6 +94,8 @@ body {
 .a-btn{
      width: 100%;
      height: 50px;
+     opacity:0.5;
+     filter:alpha(opacity=50);
 }
 .a-text{
     width: 100%;
