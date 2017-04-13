@@ -151,7 +151,7 @@ function  nextQuestion(){
     }
 
     current_question_index = current_question_index + 1;
-    setTimeout(clearMoving,500);
+    //setTimeout(clearMoving,500);
 }
 
 function  preQuestion(){
@@ -169,7 +169,7 @@ function  preQuestion(){
      }
     $("#question-"+questionList[current_question_index-1].id).animate({top: 0});
     current_question_index = current_question_index - 1;
-    setTimeout(clearMoving,500);
+    //setTimeout(clearMoving,500);
 }
 
 function clearMoving(){
