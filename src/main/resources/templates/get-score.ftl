@@ -10,30 +10,33 @@
 
 <body>
 <div id="main">
-    <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/bg-result.jpg"></img>
-    <div class="title-div">
-        <div class="title">
-            ${nickTitle}
+    <div class="main-rel">
+        <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/bg-result.jpg"></img>
+        <div class="title-div">
+            <div class="title">
+                ${nickTitle}
+            </div>
         </div>
-    </div>
 
-    <div class="score-div">
+        <div class="score-div">
             ${answerResult.score}
-    </div>
+        </div>
 
-    <div class="description-div">
-        <div class="description">
-            ${description}
+        <div class="description-div">
+            <div class="description">
+                ${description}
+            </div>
         </div>
+        <#if answerResult.rightCount gt 7 >
+            <div class="reward-div">
+                <div class="reward">
+                    <img class="a-btn" src="http://oo69h0bhm.bkt.clouddn.com/c-bg-btn.png"></img>
+                    <div class="a-text">点击领取</div>
+                </div>
+            </div>
+        </#if>
+
     </div>
-    <#if answerResult.rightCount gt 7 >
-    <div class="reward-div">
-        <div class="reward">
-            <img class="a-btn" src="http://oo69h0bhm.bkt.clouddn.com/c-bg-btn.png"></img>
-            <div class="a-text">点击领取</div>
-        </div>
-    </div>
-    </#if>
 
 </div>
 <div class="thanks">
