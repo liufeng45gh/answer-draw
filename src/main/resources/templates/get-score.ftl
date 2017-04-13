@@ -36,5 +36,11 @@
     </#if>
 
 </div>
+<div class="thanks">
+       <div class="thanks-rel">
+           <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/bg-result.jpg"></img>
+       </div>
+</div>
+<img src="/web/img/arrow.png" style="width:20px;height:15px; top:460px; left:150px;" id="array" class="arrow">
 </body>
 </html>
