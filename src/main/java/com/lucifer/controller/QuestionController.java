@@ -7,6 +7,7 @@ import com.lucifer.model.Answer;
 import com.lucifer.model.AnswerResult;
 import com.lucifer.model.Question;
 import com.lucifer.service.QuestionService;
+import com.lucifer.service.WxConfigService;
 import com.lucifer.utils.Constant;
 import com.lucifer.utils.Md5Utils;
 import com.lucifer.utils.RandomUtil;
@@ -38,6 +39,9 @@ public class QuestionController {
     private AnswerResultDao answerResultDao;
 
     @Resource
+    private WxConfigService wxConfigService;
+
+    @Resource
     private StringRedisTemplate stringRedisTemplate;
 
     @ApiOperation(value = "所有问题")
@@ -48,7 +52,9 @@ public class QuestionController {
     }
 
     @RequestMapping(value="/start-answer",method= RequestMethod.GET)
-    public String startAnswer(){
+    public String startAnswer(HttpServletRequest request){
+        //Map wxConfig =  wxConfigService.getWxConfig("http://hfc.dbdbd.cn/start-answer");
+        //request.setAttribute("wxConfig",wxConfig);
        return "start-answer";
     }
 

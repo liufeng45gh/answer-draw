@@ -1,58 +1,85 @@
-var imgUrl = 'http://oo69h0bhm.bkt.clouddn.com/logo.png';
+var shareImgUrl = 'http://oo69h0bhm.bkt.clouddn.com/logo.png';
 var lineLink = 'http://hfc.dbdbd.cn/start-answer';
-var descContent = "华泰联合证券";
+var shareContent = "华泰联合证券";
 var shareTitle = '测一测，你的投行人生是什么段位';
 var appid = 'wx93682697f2e12366';
   
-function shareFriend() {
-    WeixinJSBridge.invoke('sendAppMessage',{
-                            "appid": appid,
-                            "img_url": imgUrl,
-                            "img_width": "640",
-                            "img_height": "640",
-                            "link": lineLink,
-                            "desc": descContent,
-                            "title": shareTitle
-                            }, function(res) {
-                            _report('send_msg', res.err_msg);
-                            })
-}
-function shareTimeline() {
-    WeixinJSBridge.invoke('shareTimeline',{
-                            "img_url": imgUrl,
-                            "img_width": "640",
-                            "img_height": "640",
-                            "link": lineLink,
-                            "desc": descContent,
-                            "title": shareTitle
-                            }, function(res) {
-                            _report('timeline', res.err_msg);
-                            });
-}
-function shareWeibo() {
-    WeixinJSBridge.invoke('shareWeibo',{
-                            "content": descContent,
-                            "url": lineLink,
-                            }, function(res) {
-                            _report('weibo', res.err_msg);
-                            });
-}
-// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
-document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+$(document).ready(function() {
+    var data_send = {};
+    data_send.shareUrl = lineLink;
+        url = "/wx-config"
 
-        // 发送给好友
-        WeixinJSBridge.on('menu:share:appmessage', function(argv){
-            shareFriend();
-            });
+        var more_request =$.ajax({
+           type: 'post',
+           url: url,
+           data: data_send,
+           dataType: 'json'
+        });
 
-        // 分享到朋友圈
-        WeixinJSBridge.on('menu:share:timeline', function(argv){
-            shareTimeline();
-            });
+        more_request.fail(function( jqXHR, textStatus ) {
+          if(jqXHR.status==401){
+             //openWeiboLogin();
 
-        // 分享到微博
-        WeixinJSBridge.on('menu:share:weibo', function(argv){
-            shareWeibo();
-            });
-        },
-        false);
+          }
+        });
+
+        more_request.done(function(data) {
+                wx.config({
+                    debug: false,
+                    appId: appid,
+                    timestamp: data.timestamp,
+                    nonceStr: data.nonceStr,
+                    signature: data.signature,
+                    jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone'] // 功能列表，我们要使用JS-SDK的什么功能
+                });
+
+                wx.ready(function(){
+                    // 获取"分享到朋友圈"按钮点击状态及自定义分享内容接口
+                    wx.onMenuShareTimeline({
+                        title: shareTitle, // 分享标题
+                        link: lineLink,
+                        imgUrl: shareImgUrl // 分享图标
+                    });
+
+
+                    // 获取"分享给朋友"按钮点击状态及自定义分享内容接口
+                    wx.onMenuShareAppMessage({
+                        title: shareTitle, // 分享标题
+                        desc: shareContent, // 分享描述
+                        link: lineLink,
+                        imgUrl: shareImgUrl, // 分享图标
+                        type: 'link' // 分享类型,music、video或link，不填默认为link
+                    });
+
+
+                    //获取"分享到QQ"按钮点击状态及自定义分享内容接口
+                    wx.onMenuShareQQ({
+                    title: shareTitle, // 分享标题
+                    desc: shareContent, // 分享描述
+                    link: lineLink, // 分享链接
+                    imgUrl: shareImgUrl // 分享图标
+                    });
+
+
+                    //获取"分享到腾讯微博"按钮点击状态及自定义分享内容接口
+                    wx.onMenuShareWeibo({
+                    title: shareTitle, // 分享标题
+                    desc: shareContent, // 分享描述
+                    link: lineLink, // 分享链接
+                    imgUrl: shareImgUrl // 分享图标
+                    });
+
+
+                    //获取"分享到QQ空间"按钮点击状态及自定义分享内容接口
+                    wx.onMenuShareQZone({
+                    title: shareTitle, // 分享标题
+                    desc: shareContent, // 分享描述
+                    link: lineLink, // 分享链接
+                    imgUrl: shareImgUrl // 分享图标
+                    });
+
+                });  
+
+        });
+
+})
