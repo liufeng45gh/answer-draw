@@ -32,7 +32,9 @@ mybatis:
     mapperLocations: classpath:/sqlmaps/*.xml
     configLocation: classpath:/mybatis-config.xml
 
-
+WxPublic:
+    AppID: wx93682697f2e12366
+    AppSecret: 91aae8e97d49664f26c098e5804063b8
 
 
 
