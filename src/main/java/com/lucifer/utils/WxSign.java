@@ -29,17 +29,17 @@ public class WxSign {
         {
             MessageDigest crypt = MessageDigest.getInstance("SHA-1");
             crypt.reset();
-            crypt.update(string1.getBytes("UTF-8"));
+            crypt.update(string1.getBytes());
             signature = byteToHex(crypt.digest());
         }
         catch (NoSuchAlgorithmException e)
         {
             e.printStackTrace();
         }
-        catch (UnsupportedEncodingException e)
-        {
-            e.printStackTrace();
-        }
+//        catch (UnsupportedEncodingException e)
+//        {
+//            e.printStackTrace();
+//        }
 
         ret.put("url", url);
         ret.put("jsapi_ticket", jsapi_ticket);
