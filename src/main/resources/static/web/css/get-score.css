@@ -90,6 +90,17 @@
 
 }
 
+.arrow-ab{
+  position: absolute;
+  width: 100%;
+  top: 0px;
+}
+
+.arrow-rel{
+  position: relative;
+  width: 100%;
+}
+
 .arrow{
    position: absolute;
    z-index: 999;

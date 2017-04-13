@@ -44,6 +44,11 @@
            <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/bg-result.jpg"></img>
        </div>
 </div>
-<img src="/web/img/arrow.png" style="width:20px;height:15px; top:460px; left:150px;" id="array" class="arrow">
+<div class="arrow-ab">
+    <div class="array-rel">
+        <img src="/web/img/arrow.png" style="width:20px;height:15px; top:460px; left:150px;" id="arrow" class="arrow">
+    </div>
+</div>
+
 </body>
 </html>
