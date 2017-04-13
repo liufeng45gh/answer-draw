@@ -30,7 +30,7 @@ $(document).ready(function() {
                     timestamp: data.timestamp,
                     nonceStr: data.nonceStr,
                     signature: data.signature,
-                    jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone'] // 功能列表，我们要使用JS-SDK的什么功能
+                    jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] // 功能列表，我们要使用JS-SDK的什么功能
                 });
 
                 wx.ready(function(){
@@ -49,33 +49,6 @@ $(document).ready(function() {
                         link: lineLink,
                         imgUrl: shareImgUrl, // 分享图标
                         type: 'link' // 分享类型,music、video或link，不填默认为link
-                    });
-
-
-                    //获取"分享到QQ"按钮点击状态及自定义分享内容接口
-                    wx.onMenuShareQQ({
-                    title: shareTitle, // 分享标题
-                    desc: shareContent, // 分享描述
-                    link: lineLink, // 分享链接
-                    imgUrl: shareImgUrl // 分享图标
-                    });
-
-
-                    //获取"分享到腾讯微博"按钮点击状态及自定义分享内容接口
-                    wx.onMenuShareWeibo({
-                    title: shareTitle, // 分享标题
-                    desc: shareContent, // 分享描述
-                    link: lineLink, // 分享链接
-                    imgUrl: shareImgUrl // 分享图标
-                    });
-
-
-                    //获取"分享到QQ空间"按钮点击状态及自定义分享内容接口
-                    wx.onMenuShareQZone({
-                    title: shareTitle, // 分享标题
-                    desc: shareContent, // 分享描述
-                    link: lineLink, // 分享链接
-                    imgUrl: shareImgUrl // 分享图标
                     });
 
                 });
