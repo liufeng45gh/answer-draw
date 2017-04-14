@@ -1,8 +1,8 @@
-var shareImgUrl = 'http://oo69h0bhm.bkt.clouddn.com/logo-b.png';
+var shareImgUrl = "http://oo69h0bhm.bkt.clouddn.com/logo-c.png";
 var lineLink = "http://hfc.dbdbd.cn/start-answer";
 var shareContent = "华泰联合证券";
-var shareTitle = '测一测，你的投行人生是什么段位';
-var appid = 'wx93682697f2e12366';
+var shareTitle = "测一测，你的投行人生是什么段位";
+var appid = "wx93682697f2e12366";
   
 $(document).ready(function() {
     var data_send = {};
