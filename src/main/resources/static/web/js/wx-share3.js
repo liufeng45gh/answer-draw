@@ -1,6 +1,6 @@
  var surl = window.location.href;
     surl=surl.replace(/&/g,'|');
-    var iurl = '${ctx}/images/gold/dzxf-dan.png';
+    var iurl = 'http://oo69h0bhm.bkt.clouddn.com/share-logo.png';
     $(function(){
         $.ajax({
             type:'GET',
@@ -20,7 +20,7 @@
 
                 wx.ready(function(){
                     wx.onMenuShareTimeline({
-                        title: '华泰联合证券标题',
+                        title: '测一测你的投行人生是什么段位',
                         link: surl,
                         imgUrl: iurl,
                         success: function () {
@@ -44,8 +44,8 @@
                         }
                     });
                     wx.onMenuShareAppMessage({
-                        title: '华泰联合证券标题',
-                        desc: '华泰联合证券标题内容',
+                        title: '测一测你的投行人生是什么段位',
+                        desc: '「华泰联合证券微信公众号启动1周年」在线互动',
                         link: surl,
                         imgUrl: iurl,
                         type: 'link',
