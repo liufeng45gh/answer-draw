@@ -60,7 +60,8 @@ public class QuestionController {
 
     @RequestMapping(value="/",method= RequestMethod.GET)
     public String index(){
-        return "index";
+        return "redirect:/start-answer";
+        //return "index";
     }
 
     @RequestMapping(value="/submit-answer",method= RequestMethod.POST)
