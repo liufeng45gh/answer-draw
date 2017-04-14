@@ -1,12 +1,12 @@
 var shareImgUrl = 'http://oo69h0bhm.bkt.clouddn.com/logo-b.png';
-var lineLink ;//= location.href.split('#')[0];
+var lineLink = "http://hfc.dbdbd.cn/start-answer";
 var shareContent = "华泰联合证券";
 var shareTitle = '测一测，你的投行人生是什么段位';
 var appid = 'wx93682697f2e12366';
   
 $(document).ready(function() {
     var data_send = {};
-    lineLink = location.href.split('#')[0];
+    //lineLink = location.href.split('#')[0];
     data_send.shareUrl = location.href.split('#')[0];
         url = "/wx-config"
 
@@ -37,6 +37,7 @@ $(document).ready(function() {
 
                 wx.ready(function(){
                     // 获取"分享到朋友圈"按钮点击状态及自定义分享内容接口
+                    alert("wx.ready");
                     wx.onMenuShareTimeline({
                         title: shareTitle, // 分享标题
                         link: lineLink,
@@ -50,7 +51,14 @@ $(document).ready(function() {
                         desc: shareContent, // 分享描述
                         link: lineLink,
                         imgUrl: shareImgUrl, // 分享图标
-                        type: 'link' // 分享类型,music、video或link，不填默认为link
+                        type: 'link', // 分享类型,music、video或link，不填默认为link
+                        success: function () {
+                                 // 用户确认分享后执行的回调函数
+                                 alert("onMenuShareAppMessage success");
+                        },
+                        cancel: function () {
+                                 // 用户取消分享后执行的回调函数
+                        }
                     });
 
                 });
