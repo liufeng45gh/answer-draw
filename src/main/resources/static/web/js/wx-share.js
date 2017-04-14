@@ -1,4 +1,4 @@
-var shareImgUrl = 'http://oo69h0bhm.bkt.clouddn.com/logo.png';
+var shareImgUrl = 'http://oo69h0bhm.bkt.clouddn.com/logo-b.png';
 var lineLink ;//= location.href.split('#')[0];
 var shareContent = "华泰联合证券";
 var shareTitle = '测一测，你的投行人生是什么段位';
