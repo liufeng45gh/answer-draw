@@ -4,8 +4,8 @@
     <#include "c-head.ftl"/>
     <script  src="/web/js/adapt.js"></script>
     <title>测一测，你的投行人生是什么段位</title>
-    <link rel='stylesheet' href='/web/css/abc.css' type='text/css' media='screen' />
-    <script  src="/web/js/abc.js?version=1.0"></script>
+    <link rel='stylesheet' href='/web/css/abc.css?version=1.0' type='text/css' media='screen' />
+    <script  src="/web/js/abc.js"></script>
     <script  src="/web/js/question.js"></script>
 </head>
 
