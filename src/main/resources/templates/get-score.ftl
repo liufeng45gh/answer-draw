@@ -41,7 +41,7 @@
 </div>
 <div class="thanks">
        <div class="thanks-rel">
-           <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/thank.jpg"></img>
+           <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/thank-m.jpg"></img>
        </div>
 </div>
 <div class="arrow-ab">
