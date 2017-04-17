@@ -85,13 +85,13 @@ public class QuestionController {
         Boolean reward = false;
         String nickTitle = null;
         String description = null;
-        if (answerResult.getRightCount() < 3) {
+        if (answerResult.getRightCount() < 4) {
             nickTitle = "投行菜鸟";
             description = "本次共答对"+answerResult.getRightCount()+"道题 ,你还是投行菜鸟,需要多多向前辈学习呦!";
-        } else if (answerResult.getRightCount() < 5) {
+        } else if (answerResult.getRightCount() < 6) {
             nickTitle = "投行新手";
             description = "本次共答对"+answerResult.getRightCount()+"道题 ,你还是投行新手,争取早日成为投行老兵呦!";
-        }else if (answerResult.getRightCount() < 7) {
+        }else if (answerResult.getRightCount() < 8) {
             nickTitle = "投行老兵";
             description = "本次共答对"+answerResult.getRightCount()+"道题 ,功夫不负有心人,恭喜你已经成为投行老兵!";
         }else {
