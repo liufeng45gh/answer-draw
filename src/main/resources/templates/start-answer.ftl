@@ -82,7 +82,7 @@
         <div class="question" >
             <img  class="bg1" src="http://oo69h0bhm.bkt.clouddn.com/bg1.jpg"></img>
 
-            <div class="B">
+            <div class="C">
                 <div class="A-R" >
                     <img class="a-btn" src="http://oo69h0bhm.bkt.clouddn.com/c-bg-btn-select.png"></img>
                     <div class="a-submit" >提交答案</div>

@@ -87,7 +87,7 @@ public class QuestionController {
         String description = null;
         if (answerResult.getRightCount() < 3) {
             nickTitle = "投行菜鸟";
-            description = "本次共答对"+answerResult.getRightCount()+"道题 ,你还是投行菜鸟,需要多向前学习呦!";
+            description = "本次共答对"+answerResult.getRightCount()+"道题 ,你还是投行菜鸟,需要多多向前辈学习呦!";
         } else if (answerResult.getRightCount() < 5) {
             nickTitle = "投行新手";
             description = "本次共答对"+answerResult.getRightCount()+"道题 ,你还是投行新手,争取早日成为投行老兵呦!";
