@@ -7,7 +7,7 @@
 <script  src="/web/js/common.js"></script>
 <script  type="text/javascript" src="/layer/layer.js"></script>
 <script  type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script  type="text/javascript" src="/web/js/wx-share3.js"></script>
+<script  type="text/javascript" src="/web/js/wx-share3.js?version=1.0"></script>
 <style>
 @font-face {font-family:HYXiaoMaiTiJ; src: url("http://oo69h0bhm.bkt.clouddn.com/HYXiaoMaiTiJ.ttf")}
 </style>
