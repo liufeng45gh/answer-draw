@@ -2,7 +2,8 @@ $(document).ready(function() {
 
     if ($(".a-text").length>0) {
       $(".a-text").get(0).addEventListener('touchend', function(e) {
-          window.location.href = "http://m.lyancoffee.com/wechat/lucky/929531/0";
+          //window.location.href = "http://m.lyancoffee.com/wechat/lucky/929531/0";
+          window.location.href = "http://m.lyancoffee.com/wechat/lucky/929532/0";
       });
     }
 
