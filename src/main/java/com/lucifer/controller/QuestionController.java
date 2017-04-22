@@ -76,7 +76,7 @@ public class QuestionController {
     }
 
     @RequestMapping(value="/get-score",method= RequestMethod.GET)
-    public String getScore(@CookieValue(value = "answerToken") String token,HttpServletRequest request){
+    public String getScore(@CookieValue(value = "answerToken" ,required = false) String token,HttpServletRequest request){
         AnswerResult answerResult = answerResultDao.getAnswerResult(token);
         if (null == answerResult) {
             return "redirect:/start-answer";
