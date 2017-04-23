@@ -233,7 +233,10 @@ function submitAnswer(){
             var answerToken = result.data;
             delCookie("answerToken");
             setSessionCookie("answerToken",answerToken);
-            window.location.href = "/get-score"
+            setTimeout(function() {
+                window.location.href = "/get-score";
+            },500);
+
      });
 }
 
