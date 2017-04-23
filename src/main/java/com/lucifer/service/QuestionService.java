@@ -29,7 +29,8 @@ public class QuestionService {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     public String submitAnswer(List<Answer> answerList) throws JsonProcessingException {
-        String answerToken = UUID.randomUUID().toString();
+        String answerToken = RandomUtil.getNextAccount();
+                //UUID.randomUUID().toString();
         AnswerResult answerResult = new AnswerResult();
         answerResult.setToken(answerToken);
         String content = objectMapper.writeValueAsString(answerList);
