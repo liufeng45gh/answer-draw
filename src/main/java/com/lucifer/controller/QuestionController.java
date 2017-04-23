@@ -18,7 +18,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -66,11 +68,17 @@ public class QuestionController {
 
     @RequestMapping(value="/submit-answer",method= RequestMethod.POST)
     @ResponseBody
-    public Result submitAnswer(@RequestBody List<Answer> answerList) throws JsonProcessingException {
+    public Result submitAnswer(@RequestBody List<Answer> answerList, HttpServletResponse response) throws JsonProcessingException {
         Map<String,Object> resultMap = new HashMap<>();
         //resultMap.put("answer-token", RandomUtil.getNextAccount());
 
         String answerToken = questionService.submitAnswer(answerList);
+
+        Cookie c1 = new Cookie("answerToken",answerToken);
+
+//设置生命周期为1小时，秒为单位
+        c1.setMaxAge(3600);
+        response.addCookie(c1);
 
         return Result.ok(answerToken);
     }
