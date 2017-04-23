@@ -231,6 +231,7 @@ function submitAnswer(){
 
      more_request.done(function(result) {
             var answerToken = result.data;
+            delCookie("answerToken");
             setSessionCookie("answerToken",answerToken);
             window.location.href = "/get-score"
      });
