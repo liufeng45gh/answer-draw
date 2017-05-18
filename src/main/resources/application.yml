@@ -3,15 +3,15 @@ server:
    contextPath: /
 spring:
   redis:
-    host: hfc.dbdbd.cn
+    host: test.haifuc.cn
     port: 6379
     password: lucifer-hfc
 # DATASOURCE
 jdbc:
     driverClass: com.mysql.jdbc.Driver
-    url: jdbc:mysql://hfc.dbdbd.cn/answer-draw?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&rewriteBatchedStatements=TRUE&zeroDateTimeBehavior
+    url: jdbc:mysql://test.haifuc.cn/answer-draw?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&rewriteBatchedStatements=TRUE&zeroDateTimeBehavior
     username: hfc
-    password: lucifer-hfc
+    password: lucifer-HFC-20170501
 
 #jdbc:
 #    driverClass: com.mysql.jdbc.Driver
