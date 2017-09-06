@@ -10,7 +10,7 @@ spring:
 jdbc:
     driverClass: com.mysql.jdbc.Driver
     url: jdbc:mysql://test.haifuc.cn/answer-draw?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&rewriteBatchedStatements=TRUE&zeroDateTimeBehavior
-    username: hfc
+    username: root
     password: lucifer-HFC-20170501
 
 #jdbc:
